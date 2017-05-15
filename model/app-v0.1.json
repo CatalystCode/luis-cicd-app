@@ -1,0 +1,1007 @@
+{
+  "luis_schema_version": "2.0.0",
+  "versionId": "0.1",
+  "name": "capitalise-new",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "CreateStrategy"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+  ],
+  "composites": [
+    {
+      "name": "base.condition",
+      "children": [
+        "base.condition.operator",
+        "money",
+        "stock"
+      ]
+    },
+    {
+      "name": "market.action",
+      "children": [
+        "stock",
+        "execution.action",
+        "number"
+      ]
+    }
+  ],
+  "closedLists": [
+    {
+      "name": "stock",
+      "subLists": [
+        {
+          "canonicalForm": "AAPL",
+          "list": [
+            "Apple Inc.",
+            "Apple"
+          ]
+        },
+        {
+          "canonicalForm": "MSFT",
+          "list": [
+            "Microsoft Corporation",
+            "Microsoft"
+          ]
+        },
+        {
+          "canonicalForm": "AMZN",
+          "list": [
+            "Amazon.com, Inc.",
+            "Amazon"
+          ]
+        },
+        {
+          "canonicalForm": "GOOG",
+          "list": [
+            "Alphabet Inc.",
+            "Google"
+          ]
+        },
+         {
+          "canonicalForm": "GOOGL",
+          "list": [
+            "Alphabet Inc."
+          ]
+        },
+         {
+          "canonicalForm": "TSLA",
+          "list": [
+            "Tesla, Inc.",
+            "Tesla"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "base.condition.operator",
+      "subLists": [
+        {
+          "canonicalForm": "higher",
+          "list": [
+            "higher than",
+            "above",
+            "greater",
+            "greater than"
+          ]
+        },
+        {
+          "canonicalForm": "below",
+          "list": [
+            "less than",
+            "smaller than",
+            "under"
+          ]
+        },
+        {
+          "canonicalForm": "break",
+          "list": [
+            "breaks"
+          ]
+        },
+        {
+          "canonicalForm": "and",
+          "list": [
+            "but"
+          ]
+        },
+        {
+          "canonicalForm": "or",
+          "list": [
+          ]
+        }
+      ]
+    },
+    {
+      "name": "execution.action",
+      "subLists": [
+        {
+          "canonicalForm": "buy",
+          "list": [
+            "get",
+            "purchase"
+          ]
+        },
+        {
+          "canonicalForm": "sell",
+          "list": [
+          ]
+        },
+        {
+          "canonicalForm": "email",
+          "list": [
+            "send an email",
+            "send email",
+            "notify"
+          ]
+        }
+      ]
+    }
+  ],
+  "bing_entities": [
+    "money",
+    "number"
+  ],
+  "actions": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "if aapl is higher than $200",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 11,
+          "endPos": 21
+        },
+        {
+          "entity": "stock",
+          "startPos": 3,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "if the price of goog is above $100",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 24,
+          "endPos": 28
+        },
+        {
+          "entity": "stock",
+          "startPos": 16,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "buy 100 aapl shares at market",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "stock",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "market.action",
+          "startPos": 0,
+          "endPos": 11
+        },
+        {
+          "entity": "number",
+          "startPos": 4,
+          "endPos": 6
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "sell 100 aapl shares at $100",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "stock",
+          "startPos": 9,
+          "endPos": 12
+        },
+        {
+          "entity": "number",
+          "startPos": 5,
+          "endPos": 7
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 0,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "buy 100 aapl shares",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "stock",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "market.action",
+          "startPos": 0,
+          "endPos": 11
+        },
+        {
+          "entity": "number",
+          "startPos": 4,
+          "endPos": 6
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "buy 100 aapl shares and sell 100 goog shares",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "stock",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "stock",
+          "startPos": 33,
+          "endPos": 36
+        },
+        {
+          "entity": "market.action",
+          "startPos": 0,
+          "endPos": 11
+        },
+        {
+          "entity": "market.action",
+          "startPos": 24,
+          "endPos": 36
+        },
+        {
+          "entity": "number",
+          "startPos": 4,
+          "endPos": 6
+        },
+        {
+          "entity": "number",
+          "startPos": 29,
+          "endPos": 31
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 24,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "this is not related",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "buy 100 aapl shares if aapl is higher than $200",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 31,
+          "endPos": 41
+        },
+        {
+          "entity": "stock",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "stock",
+          "startPos": 23,
+          "endPos": 26
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 23,
+          "endPos": 46
+        },
+        {
+          "entity": "market.action",
+          "startPos": 0,
+          "endPos": 11
+        },
+        {
+          "entity": "number",
+          "startPos": 4,
+          "endPos": 6
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "if aapl is above $100 and goog is below $1000 buy 250 shares of aapl",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "base.condition.operator",
+          "startPos": 34,
+          "endPos": 38
+        },
+        {
+          "entity": "stock",
+          "startPos": 3,
+          "endPos": 6
+        },
+        {
+          "entity": "stock",
+          "startPos": 26,
+          "endPos": 29
+        },
+        {
+          "entity": "stock",
+          "startPos": 64,
+          "endPos": 67
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 3,
+          "endPos": 20
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 26,
+          "endPos": 44
+        },
+        {
+          "entity": "market.action",
+          "startPos": 46,
+          "endPos": 67
+        },
+        {
+          "entity": "number",
+          "startPos": 50,
+          "endPos": 52
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 46,
+          "endPos": 48
+        }
+      ]
+    },
+    {
+      "text": "buy 10 aapl shares if aapl is higher than $200",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 30,
+          "endPos": 40
+        },
+        {
+          "entity": "stock",
+          "startPos": 7,
+          "endPos": 10
+        },
+        {
+          "entity": "stock",
+          "startPos": 22,
+          "endPos": 25
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 22,
+          "endPos": 45
+        },
+        {
+          "entity": "market.action",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "number",
+          "startPos": 4,
+          "endPos": 5
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "if goog is above $1000 buy 12 goog shares",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "stock",
+          "startPos": 3,
+          "endPos": 6
+        },
+        {
+          "entity": "stock",
+          "startPos": 30,
+          "endPos": 33
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 3,
+          "endPos": 21
+        },
+        {
+          "entity": "market.action",
+          "startPos": 23,
+          "endPos": 33
+        },
+        {
+          "entity": "number",
+          "startPos": 27,
+          "endPos": 28
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 23,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "buy 10 aapl shares when aapl is higher than $200",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 32,
+          "endPos": 42
+        },
+        {
+          "entity": "stock",
+          "startPos": 7,
+          "endPos": 10
+        },
+        {
+          "entity": "stock",
+          "startPos": 24,
+          "endPos": 27
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 24,
+          "endPos": 47
+        },
+        {
+          "entity": "market.action",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "number",
+          "startPos": 4,
+          "endPos": 5
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "sell at market 20 msft if msft goes above $500 and aapl is higher than $100",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 36,
+          "endPos": 40
+        },
+        {
+          "entity": "base.condition.operator",
+          "startPos": 59,
+          "endPos": 69
+        },
+        {
+          "entity": "stock",
+          "startPos": 18,
+          "endPos": 21
+        },
+        {
+          "entity": "stock",
+          "startPos": 26,
+          "endPos": 29
+        },
+        {
+          "entity": "stock",
+          "startPos": 51,
+          "endPos": 54
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 26,
+          "endPos": 45
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 51,
+          "endPos": 74
+        },
+        {
+          "entity": "market.action",
+          "startPos": 0,
+          "endPos": 21
+        },
+        {
+          "entity": "number",
+          "startPos": 15,
+          "endPos": 16
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 0,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "buy 10 goog shares if aapl is higher than $100 and goog is above $250",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 30,
+          "endPos": 40
+        },
+        {
+          "entity": "base.condition.operator",
+          "startPos": 59,
+          "endPos": 63
+        },
+        {
+          "entity": "stock",
+          "startPos": 7,
+          "endPos": 10
+        },
+        {
+          "entity": "stock",
+          "startPos": 22,
+          "endPos": 25
+        },
+        {
+          "entity": "stock",
+          "startPos": 51,
+          "endPos": 54
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 22,
+          "endPos": 45
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 51,
+          "endPos": 68
+        },
+        {
+          "entity": "market.action",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "number",
+          "startPos": 4,
+          "endPos": 5
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "if aapl is higher than $300 buy 10 aapl shares",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 11,
+          "endPos": 21
+        },
+        {
+          "entity": "stock",
+          "startPos": 3,
+          "endPos": 6
+        },
+        {
+          "entity": "stock",
+          "startPos": 35,
+          "endPos": 38
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 3,
+          "endPos": 26
+        },
+        {
+          "entity": "market.action",
+          "startPos": 28,
+          "endPos": 38
+        },
+        {
+          "entity": "number",
+          "startPos": 32,
+          "endPos": 33
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 28,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "buy 10 aapl shares if aapl is higher than $400",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 30,
+          "endPos": 40
+        },
+        {
+          "entity": "stock",
+          "startPos": 7,
+          "endPos": 10
+        },
+        {
+          "entity": "stock",
+          "startPos": 22,
+          "endPos": 25
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 22,
+          "endPos": 45
+        },
+        {
+          "entity": "market.action",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "number",
+          "startPos": 4,
+          "endPos": 5
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "if aapl is higher than $350 sell 11 aapl shares",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 11,
+          "endPos": 21
+        },
+        {
+          "entity": "stock",
+          "startPos": 3,
+          "endPos": 6
+        },
+        {
+          "entity": "stock",
+          "startPos": 36,
+          "endPos": 39
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 3,
+          "endPos": 26
+        },
+        {
+          "entity": "market.action",
+          "startPos": 28,
+          "endPos": 39
+        },
+        {
+          "entity": "number",
+          "startPos": 33,
+          "endPos": 34
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 28,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "if aapl is above $400 buy 11 aapl shares",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "stock",
+          "startPos": 3,
+          "endPos": 6
+        },
+        {
+          "entity": "stock",
+          "startPos": 29,
+          "endPos": 32
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 3,
+          "endPos": 20
+        },
+        {
+          "entity": "market.action",
+          "startPos": 22,
+          "endPos": 32
+        },
+        {
+          "entity": "number",
+          "startPos": 26,
+          "endPos": 27
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 22,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "if aapl is higher than $400 buy 10 aapl shares",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 11,
+          "endPos": 21
+        },
+        {
+          "entity": "stock",
+          "startPos": 3,
+          "endPos": 6
+        },
+        {
+          "entity": "stock",
+          "startPos": 35,
+          "endPos": 38
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 3,
+          "endPos": 26
+        },
+        {
+          "entity": "market.action",
+          "startPos": 28,
+          "endPos": 38
+        },
+        {
+          "entity": "number",
+          "startPos": 32,
+          "endPos": 33
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 28,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "sell 12 aapl shares if aapl is above $201",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 31,
+          "endPos": 35
+        },
+        {
+          "entity": "stock",
+          "startPos": 8,
+          "endPos": 11
+        },
+        {
+          "entity": "stock",
+          "startPos": 23,
+          "endPos": 26
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 23,
+          "endPos": 40
+        },
+        {
+          "entity": "market.action",
+          "startPos": 0,
+          "endPos": 11
+        },
+        {
+          "entity": "number",
+          "startPos": 5,
+          "endPos": 6
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 0,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "if aapl is above $400 buy 10 aapl",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 11,
+          "endPos": 15
+        },
+        {
+          "entity": "stock",
+          "startPos": 3,
+          "endPos": 6
+        },
+        {
+          "entity": "stock",
+          "startPos": 29,
+          "endPos": 32
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 3,
+          "endPos": 20
+        },
+        {
+          "entity": "market.action",
+          "startPos": 22,
+          "endPos": 32
+        },
+        {
+          "entity": "number",
+          "startPos": 26,
+          "endPos": 27
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 22,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "buy 10 aapl shares and sell 2 goog if aapl is higher than $400 and goog is below $1000",
+      "intent": "CreateStrategy",
+      "entities": [
+        {
+          "entity": "base.condition.operator",
+          "startPos": 46,
+          "endPos": 56
+        },
+        {
+          "entity": "base.condition.operator",
+          "startPos": 75,
+          "endPos": 79
+        },
+        {
+          "entity": "stock",
+          "startPos": 7,
+          "endPos": 10
+        },
+        {
+          "entity": "stock",
+          "startPos": 30,
+          "endPos": 33
+        },
+        {
+          "entity": "stock",
+          "startPos": 38,
+          "endPos": 41
+        },
+        {
+          "entity": "stock",
+          "startPos": 67,
+          "endPos": 70
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 38,
+          "endPos": 61
+        },
+        {
+          "entity": "base.condition",
+          "startPos": 67,
+          "endPos": 85
+        },
+        {
+          "entity": "market.action",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "market.action",
+          "startPos": 23,
+          "endPos": 33
+        },
+        {
+          "entity": "number",
+          "startPos": 4,
+          "endPos": 5
+        },
+        {
+          "entity": "number",
+          "startPos": 28,
+          "endPos": 28
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 0,
+          "endPos": 2
+        },
+        {
+          "entity": "execution.action",
+          "startPos": 23,
+          "endPos": 26
+        }
+      ]
+    }
+  ]
+}
