@@ -1,0 +1,258 @@
+[
+  {
+    "IntentsResults": [
+      {
+        "Name": "CreateStrategy",
+        "label": null,
+        "score": 0.17,
+        "intentId": "dd21a71f-9bba-4662-8ce0-3b3bf6f9d4cf"
+      },
+      {
+        "Name": "None",
+        "label": null,
+        "score": 0.49,
+        "intentId": "57c09af8-4d2c-4397-a528-7ec31bc4ee99"
+      }
+    ],
+    "EntitiesResults": [
+      {
+        "name": "value",
+        "indeces": {
+          "startToken": 5,
+          "endToken": 6
+        },
+        "word": "$ 20",
+        "color": "#FF8C00",
+        "isBuiltInExtractor": false,
+        "type": "e",
+        "entityId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "name": "stock.condition",
+        "indeces": {
+          "startToken": 1,
+          "endToken": 6
+        },
+        "word": "aapl is higher than $ 20",
+        "color": "#B4A0FF",
+        "isBuiltInExtractor": false,
+        "type": "e",
+        "entityId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "name": "money",
+        "indeces": {
+          "startToken": 5,
+          "endToken": 6
+        },
+        "word": "$20",
+        "color": "#F17FC5",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "37ff4c3e-33e2-406e-b058-768116296945"
+      },
+      {
+        "name": "number",
+        "indeces": {
+          "startToken": 6,
+          "endToken": 6
+        },
+        "word": "20",
+        "color": "#008272",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "db2a69bc-2576-4175-b2e8-ee809ce90b00"
+      },
+      {
+        "name": "base.comparator",
+        "indeces": {
+          "startToken": 3,
+          "endToken": 4
+        },
+        "word": "higher than",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "f9718014-7a0c-48a1-9883-1ab2220763b5"
+      },
+      {
+        "name": "stock",
+        "indeces": {
+          "startToken": 1,
+          "endToken": 1
+        },
+        "word": "aapl",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "03d63d52-bc64-48d0-af99-b6c08b7c371c"
+      }
+    ],
+    "utteranceText": "if aapl is higher than $20",
+    "tokenizedText": [
+      "if",
+      "aapl",
+      "is",
+      "higher",
+      "than",
+      "$",
+      "20"
+    ],
+    "exampleId": "",
+    "metadata": null
+  },
+  {
+    "IntentsResults": [
+      {
+        "Name": "CreateStrategy",
+        "label": null,
+        "score": 0.95,
+        "intentId": "dd21a71f-9bba-4662-8ce0-3b3bf6f9d4cf"
+      },
+      {
+        "Name": "None",
+        "label": null,
+        "score": 0.18,
+        "intentId": "57c09af8-4d2c-4397-a528-7ec31bc4ee99"
+      }
+    ],
+    "EntitiesResults": [
+      {
+        "name": "value",
+        "indeces": {
+          "startToken": 9,
+          "endToken": 9
+        },
+        "word": "$",
+        "color": "#FF8C00",
+        "isBuiltInExtractor": false,
+        "type": "e",
+        "entityId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "name": "market.action",
+        "indeces": {
+          "startToken": 0,
+          "endToken": 2
+        },
+        "word": "buy 100 aapl",
+        "color": "#D7D7D7",
+        "isBuiltInExtractor": false,
+        "type": "e",
+        "entityId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "name": "stock.condition",
+        "indeces": {
+          "startToken": 5,
+          "endToken": 9
+        },
+        "word": "aapl is higher than $",
+        "color": "#B4A0FF",
+        "isBuiltInExtractor": false,
+        "type": "e",
+        "entityId": "00000000-0000-0000-0000-000000000000"
+      },
+      {
+        "name": "money",
+        "indeces": {
+          "startToken": 9,
+          "endToken": 10
+        },
+        "word": "$200",
+        "color": "#F17FC5",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "37ff4c3e-33e2-406e-b058-768116296945"
+      },
+      {
+        "name": "number",
+        "indeces": {
+          "startToken": 1,
+          "endToken": 1
+        },
+        "word": "100",
+        "color": "#008272",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "db2a69bc-2576-4175-b2e8-ee809ce90b00"
+      },
+      {
+        "name": "number",
+        "indeces": {
+          "startToken": 10,
+          "endToken": 10
+        },
+        "word": "200",
+        "color": "#008272",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "db2a69bc-2576-4175-b2e8-ee809ce90b00"
+      },
+      {
+        "name": "base.comparator",
+        "indeces": {
+          "startToken": 7,
+          "endToken": 8
+        },
+        "word": "higher than",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "f9718014-7a0c-48a1-9883-1ab2220763b5"
+      },
+      {
+        "name": "execution.action",
+        "indeces": {
+          "startToken": 0,
+          "endToken": 0
+        },
+        "word": "buy",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "74dc8772-32b0-4582-8d08-9354b38e7f8c"
+      },
+      {
+        "name": "stock",
+        "indeces": {
+          "startToken": 2,
+          "endToken": 2
+        },
+        "word": "aapl",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "03d63d52-bc64-48d0-af99-b6c08b7c371c"
+      },
+      {
+        "name": "stock",
+        "indeces": {
+          "startToken": 5,
+          "endToken": 5
+        },
+        "word": "aapl",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "03d63d52-bc64-48d0-af99-b6c08b7c371c"
+      }
+    ],
+    "utteranceText": "buy 100 aapl shares if aapl is higher than $200",
+    "tokenizedText": [
+      "buy",
+      "100",
+      "aapl",
+      "shares",
+      "if",
+      "aapl",
+      "is",
+      "higher",
+      "than",
+      "$",
+      "200"
+    ],
+    "exampleId": "",
+    "metadata": null
+  }
+]
