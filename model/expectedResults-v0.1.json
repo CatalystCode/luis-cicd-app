@@ -24,8 +24,8 @@
         "word": "$ 20",
         "color": "#FF8C00",
         "isBuiltInExtractor": false,
-        "type": "e",
-        "entityId": "00000000-0000-0000-0000-000000000000"
+        "type": "Entity Extractor",
+        "entityId": "4aee38bd-14e8-43fa-a805-481196d66915"
       },
       {
         "name": "stock.condition",
@@ -36,8 +36,8 @@
         "word": "aapl is higher than $ 20",
         "color": "#B4A0FF",
         "isBuiltInExtractor": false,
-        "type": "e",
-        "entityId": "00000000-0000-0000-0000-000000000000"
+        "type": "Composite Entity Extractor",
+        "entityId": "f726d41c-680a-43c0-a596-da4b521b10e3"
       },
       {
         "name": "money",
@@ -126,8 +126,8 @@
         "word": "$",
         "color": "#FF8C00",
         "isBuiltInExtractor": false,
-        "type": "e",
-        "entityId": "00000000-0000-0000-0000-000000000000"
+        "type": "Entity Extractor",
+        "entityId": "4aee38bd-14e8-43fa-a805-481196d66915"
       },
       {
         "name": "market.action",
@@ -138,8 +138,8 @@
         "word": "buy 100 aapl",
         "color": "#D7D7D7",
         "isBuiltInExtractor": false,
-        "type": "e",
-        "entityId": "00000000-0000-0000-0000-000000000000"
+        "type": "Composite Entity Extractor",
+        "entityId": "0e83c332-7df2-496f-8726-c9bea4ccee59"
       },
       {
         "name": "stock.condition",
@@ -150,8 +150,8 @@
         "word": "aapl is higher than $",
         "color": "#B4A0FF",
         "isBuiltInExtractor": false,
-        "type": "e",
-        "entityId": "00000000-0000-0000-0000-000000000000"
+        "type": "Composite Entity Extractor",
+        "entityId": "f726d41c-680a-43c0-a596-da4b521b10e3"
       },
       {
         "name": "money",
@@ -251,6 +251,160 @@
       "than",
       "$",
       "200"
+    ],
+    "exampleId": "",
+    "metadata": null
+  },
+  {
+    "IntentsResults": [
+      {
+        "Name": "CreateStrategy",
+        "label": null,
+        "score": 0.99,
+        "intentId": "dd21a71f-9bba-4662-8ce0-3b3bf6f9d4cf"
+      },
+      {
+        "Name": "None",
+        "label": null,
+        "score": 0.11,
+        "intentId": "57c09af8-4d2c-4397-a528-7ec31bc4ee99"
+      }
+    ],
+    "EntitiesResults": [
+      {
+        "name": "value",
+        "indeces": {
+          "startToken": 5,
+          "endToken": 6
+        },
+        "word": "$ 300",
+        "color": "#FF8C00",
+        "isBuiltInExtractor": false,
+        "type": "Entity Extractor",
+        "entityId": "4aee38bd-14e8-43fa-a805-481196d66915"
+      },
+      {
+        "name": "market.action",
+        "indeces": {
+          "startToken": 7,
+          "endToken": 9
+        },
+        "word": "buy 10 aapl",
+        "color": "#D7D7D7",
+        "isBuiltInExtractor": false,
+        "type": "Composite Entity Extractor",
+        "entityId": "0e83c332-7df2-496f-8726-c9bea4ccee59"
+      },
+      {
+        "name": "stock.condition",
+        "indeces": {
+          "startToken": 1,
+          "endToken": 6
+        },
+        "word": "aapl is higher than $ 300",
+        "color": "#B4A0FF",
+        "isBuiltInExtractor": false,
+        "type": "Composite Entity Extractor",
+        "entityId": "f726d41c-680a-43c0-a596-da4b521b10e3"
+      },
+      {
+        "name": "money",
+        "indeces": {
+          "startToken": 5,
+          "endToken": 6
+        },
+        "word": "$300",
+        "color": "#F17FC5",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "37ff4c3e-33e2-406e-b058-768116296945"
+      },
+      {
+        "name": "number",
+        "indeces": {
+          "startToken": 6,
+          "endToken": 6
+        },
+        "word": "300",
+        "color": "#008272",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "db2a69bc-2576-4175-b2e8-ee809ce90b00"
+      },
+      {
+        "name": "number",
+        "indeces": {
+          "startToken": 8,
+          "endToken": 8
+        },
+        "word": "10",
+        "color": "#008272",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "db2a69bc-2576-4175-b2e8-ee809ce90b00"
+      },
+      {
+        "name": "base.comparator",
+        "indeces": {
+          "startToken": 3,
+          "endToken": 4
+        },
+        "word": "higher than",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "f9718014-7a0c-48a1-9883-1ab2220763b5"
+      },
+      {
+        "name": "execution.action",
+        "indeces": {
+          "startToken": 7,
+          "endToken": 7
+        },
+        "word": "buy",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "74dc8772-32b0-4582-8d08-9354b38e7f8c"
+      },
+      {
+        "name": "stock",
+        "indeces": {
+          "startToken": 1,
+          "endToken": 1
+        },
+        "word": "aapl",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "03d63d52-bc64-48d0-af99-b6c08b7c371c"
+      },
+      {
+        "name": "stock",
+        "indeces": {
+          "startToken": 9,
+          "endToken": 9
+        },
+        "word": "aapl",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "03d63d52-bc64-48d0-af99-b6c08b7c371c"
+      }
+    ],
+    "utteranceText": "if aapl is higher than $300 buy 10 aapl shares",
+    "tokenizedText": [
+      "if",
+      "aapl",
+      "is",
+      "higher",
+      "than",
+      "$",
+      "300",
+      "buy",
+      "10",
+      "aapl",
+      "shares"
     ],
     "exampleId": "",
     "metadata": null
