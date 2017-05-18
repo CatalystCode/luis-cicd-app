@@ -1,0 +1,170 @@
+[
+    {
+    "IntentsResults": [
+      {
+        "Name": "CreateStrategy",
+        "label": null,
+        "score": 0.81,
+        "intentId": "dd21a71f-9bba-4662-8ce0-3b3bf6f9d4cf"
+      },
+      {
+        "Name": "None",
+        "label": null,
+        "score": 0.33,
+        "intentId": "57c09af8-4d2c-4397-a528-7ec31bc4ee99"
+      }
+    ],
+    "EntitiesResults": [
+      {
+        "name": "forex.condition",
+        "indeces": {
+          "startToken": 1,
+          "endToken": 11
+        },
+        "word": "usd / jpy is higher than 5 . 5 buy 150",
+        "color": "#00BCF2",
+        "isBuiltInExtractor": false,
+        "type": "Composite Entity Extractor",
+        "entityId": "91204508-c6e4-40ce-aead-281c7c669ff5"
+      },
+      {
+        "name": "value",
+        "indeces": {
+          "startToken": 7,
+          "endToken": 9
+        },
+        "word": "5 . 5",
+        "color": "#FF8C00",
+        "isBuiltInExtractor": false,
+        "type": "Entity Extractor",
+        "entityId": "4aee38bd-14e8-43fa-a805-481196d66915"
+      },
+      {
+        "name": "market.action",
+        "indeces": {
+          "startToken": 10,
+          "endToken": 12
+        },
+        "word": "buy 150 usd",
+        "color": "#D7D7D7",
+        "isBuiltInExtractor": false,
+        "type": "Composite Entity Extractor",
+        "entityId": "0e83c332-7df2-496f-8726-c9bea4ccee59"
+      },
+      {
+        "name": "money",
+        "indeces": {
+          "startToken": 11,
+          "endToken": 12
+        },
+        "word": "150 usd",
+        "color": "#F17FC5",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "37ff4c3e-33e2-406e-b058-768116296945"
+      },
+      {
+        "name": "money",
+        "indeces": {
+          "startToken": 1,
+          "endToken": 1
+        },
+        "word": "usd",
+        "color": "#F17FC5",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "37ff4c3e-33e2-406e-b058-768116296945"
+      },
+      {
+        "name": "money",
+        "indeces": {
+          "startToken": 3,
+          "endToken": 3
+        },
+        "word": "jpy",
+        "color": "#F17FC5",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "37ff4c3e-33e2-406e-b058-768116296945"
+      },
+      {
+        "name": "number",
+        "indeces": {
+          "startToken": 7,
+          "endToken": 9
+        },
+        "word": "5.5",
+        "color": "#008272",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "db2a69bc-2576-4175-b2e8-ee809ce90b00"
+      },
+      {
+        "name": "number",
+        "indeces": {
+          "startToken": 11,
+          "endToken": 11
+        },
+        "word": "150",
+        "color": "#008272",
+        "isBuiltInExtractor": true,
+        "type": "Prebuilt Entity Extractor",
+        "entityId": "db2a69bc-2576-4175-b2e8-ee809ce90b00"
+      },
+      {
+        "name": "base.comparator",
+        "indeces": {
+          "startToken": 5,
+          "endToken": 6
+        },
+        "word": "higher than",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "f9718014-7a0c-48a1-9883-1ab2220763b5"
+      },
+      {
+        "name": "forex",
+        "indeces": {
+          "startToken": 1,
+          "endToken": 3
+        },
+        "word": "usd / jpy",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "60457054-15bc-4e95-82ef-3013d4c267f6"
+      },
+      {
+        "name": "execution.action",
+        "indeces": {
+          "startToken": 10,
+          "endToken": 10
+        },
+        "word": "buy",
+        "color": null,
+        "isBuiltInExtractor": false,
+        "type": "Closed List Entity Extractor",
+        "entityId": "74dc8772-32b0-4582-8d08-9354b38e7f8c"
+      }
+    ],
+    "utteranceText": "if usd/jpy is higher than 5.5 buy 150 usd",
+    "tokenizedText": [
+      "if",
+      "usd",
+      "/",
+      "jpy",
+      "is",
+      "higher",
+      "than",
+      "5",
+      ".",
+      "5",
+      "buy",
+      "150",
+      "usd"
+    ],
+    "exampleId": "",
+    "metadata": null
+  }
+]
